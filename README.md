@@ -2,6 +2,15 @@
 
 A comprehensive RAG (Retrieval-Augmented Generation) system that processes Excel files, builds searchable indexes using txtai embeddings, and generates AI-powered responses using local Ollama LLM. This system works completely offline after initial setup.
 
+## User Interface
+
+#### Excel File Processing
+<img width="600" height="472" alt="Screenshot 2025-12-04 at 19 08 06" src="https://github.com/user-attachments/assets/2623a84d-ae61-442d-80c7-1e42e42b7f71" />
+
+#### Single Question Processing
+<img width="600" height="472" alt="Screenshot 2025-12-04 at 19 08 14" src="https://github.com/user-attachments/assets/95355c26-068d-410f-a852-c529f59b6b8d" />
+
+
 ## 🌟 Features
 
 - **Offline Operation**: Works completely offline using local AI models
