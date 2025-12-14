@@ -424,10 +424,10 @@ class RAGExcelProcessor:
         print(f"📏 Total Context Length: {len(context)} characters")
         print("="*100 + "\n")
         
-        # Create prompt for the LLM (from v1 file)
+        # Add custom prompt here
         prompt = f"""
 
-You are an information security consultant responding on behalf of Leegality (Grey Swift Pvt. Ltd.) to a client security assessment. Provide accurate, diplomatic, and compliant answers.
+You are an analyst responding on behalf of ...... to a client. Provide accurate, diplomatic, and compliant answers.
 
 Important rules:
 - Answer only the specific 1 question (may have subparts - but will be considered 1 single question) under "QUESTION(s) TO ANSWER" till before the start of “REFERENCE DOCUMENTS” section.
@@ -435,9 +435,8 @@ Important rules:
 - “Guidelines” section will give the instructions for answer framing and rules to follow at all times.
 
 Context:
-- You represent Grey Swift or Leegality (third party under review).
-- Client is performing due diligence on security.
-- Responses are used for compliance/risk assessment.
+- You represent ..........
+- Responses are used for .........
 - Maintain professional tone with transparency.
 
 QUESTION(s) TO ANSWER:
@@ -472,24 +471,13 @@ Guidelines:
 - Use generic wording such as “the organization’s data” rather than client names, unless required by the context.
 - Do not justify clear No/Not Applicable answers; justify only when a Yes is expected.
 
-5. Compliance
-- Frame answers around security objectives and compliance posture.
-- Reference standards/frameworks if they are mentioned in the context.
-
-6. Format
+5. Format
 - Use plain text only (no markdown, bold, or headings).
 - Write in full sentences and short paragraphs, not lists.
 - Do not include the question itself in the response.
 
-7. Evidence
-- Add an "Evidence:" section only if explicit document titles, filenames, or policy names are present in the provided context.
-- Valid examples: "Information Security Policy_2025.pdf", "Access Control Procedure v1.03.pdf". Generally with .pdf in the name or some hyperlinks.
-- Invalid examples: "Reference Document 1", "Data Centre Information", or any descriptive text that is not a real filename/title.
-- If multiple valid versions exist, list only the latest version (based on year, version, or naming convention).
-- If no explicit document names are available, omit the Evidence section entirely.
-
 RESPONSE FORMAT:
-Provide a professional, structured, focused response that directly addresses the question(s) above while representing Leegality's security posture accurately.
+Provide a professional, structured, focused response that directly addresses the question(s) above while representing the posture accurately.
 
 Response:"""
 
