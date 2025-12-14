@@ -47,8 +47,8 @@ A comprehensive RAG (Retrieval-Augmented Generation) system that processes Excel
 
 ---
 
-#### 2. **rag_system v1 Semantic search - check sql injection.py**
-**Purpose**: Core RAG system implementation with semantic search and SQL injection protection
+#### 2. **rag_excel_processor_gui.py**
+**Purpose**: Core RAG system implementation with semantic search
 
 **Key Features**:
 - Integrates txtai embeddings with Ollama LLM
@@ -162,14 +162,17 @@ python build_index.py
 - Place your Excel files in a designated folder
 - Script will extract Q&A data and build searchable index
 
-#### 2. Test RAG System
+#### 2. Update Prompt in `rag_excel_processor_gui.py` file
+<img width="1298" height="365" alt="Screenshot 2025-12-14 at 17 27 53" src="https://github.com/user-attachments/assets/dfd87ed5-c305-4cc0-bb55-7264eafbddaa" />
+
+#### 3. Test RAG System
 ```bash
 python quick_rag.py
 ```
 - Quick test of your RAG setup
 - Validates index and Ollama integration
 
-#### 3. SQL-based Querying
+#### 4. SQL-based Querying
 ```bash
 python sql_qa.py
 ```
